@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom';
+
+import Home from './components/pages/Home/Home';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Navbar /> */} {/* TODO - create Navbar component */}
+
+      <Switch>
+        <Route exact path="/" component={Home} /> {/* TODO - build Home component */}
+        {/* <Route exact path="/login" component={Login} /> TODO - create Login component */}
+        {/* <Route exact path="/register" component={Register} /> TODO - create Register component */}
+
+        {/* TODO - implement auth and utilize PrivateRoute for auth-restricted 
+        <PrivateRoute component={Dashboard} exact path="/dashboard" authed={props.userIsAuthenticated} />
+        <Route
+          path="/login"
+          render={() => {
+            return <Login authed={props.userIsAuthenticated} {...props} />;
+          }}
+        /> 
+        */}
+      </Switch>
+
+      {/* <Footer /> */} {/* TODO - create Footer component */}
     </div>
   );
 }
