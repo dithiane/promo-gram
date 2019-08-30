@@ -1,31 +1,45 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+  To contribute, clone the project down and run `npm install` in the project folder.
+    
+  (You may also have to run `npm install` in the `functions` folder for Firebase Functions dependencies)
 
-In the project directory, you can run:
+# Important Scripts
+
+## Development Scripts:
+
+### `npm run dev`
+  Starts up the React front-end and Firebase back-end for you, and refreshes them when changes are made.
+
+  Front-end (React): Port 3000 <br>
+  Back-end (Functions): Port 5001
+
+### `npm run build`
+
+  Builds the app for production to the `build` folder. <br>
+  It correctly bundles React AND Firebase in production mode and optimizes the build for the best performance.
+
+  After running `build` you can run `firebase deploy` to deploy the app to Firebase Hosting,<br> 
+  or `firebase serve` to see a *simulated deployment* in the Hosting emulator on your local machine (see `firebase serve` below).
 
 ### `npm start`
+  Only starts the React front-end. <br>
+  (Port 3000)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `firebase serve`
+  Takes what is in the `build` folder and deploys it to a local Hosting emulator, simulating the deployed app. <br>
+  (Port 5000)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+  ***Caution***: This command is primarily for testing the app in a simulated production environment (Firebase Hosting) without actually deploying it to Firebase. **To make live changes to both the front-end and back-end while they are running, use `npm run dev`.**
+
+  ***Explanation***: the front-end that this script serves at localhost:5000 is pulled from the compiled code in the `build` folder. 
+  Making changes to back-end code in the `functions` folder will be reflected immediately, but changes to front-end code in the `src` folder will not be reflected until the npm `build` script is run again.
+
+## Other Scripts
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -37,32 +51,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
