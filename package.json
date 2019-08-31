@@ -19,9 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "run-p --race dev:firebase dev:react",
-    "dev:firebase": "firebase serve",
-    "dev:react": "react-scripts start"
+    "dev": "run-p --race functions start",
+    "functions": "firebase serve --only functions"
   },
   "eslintConfig": {
     "extends": "react-app"
