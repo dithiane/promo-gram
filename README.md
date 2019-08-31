@@ -25,7 +25,7 @@
   Only runs the React front-end. <br>
   *(Port 3000)*
 
-### `npm run functions` ***or*** `firebase serve --only functions`
+### `npm run functions`
 
   Only runs the Firebase Functions back-end. <br>
   *(Port 5000)*
@@ -37,16 +37,16 @@
 
   ***After*** running `build` you can run:
   - `firebase deploy` to deploy the app to Firebase.
-  - `firebase deploy --only functions` to only deploy Functions.
   - `firebase serve` to see a *simulated deployment* in the Hosting emulator on your local machine (see `firebase serve` below).
 
 ## Production:
-> *You must run `npm run build` before any of the following commands can be run.*
 
 ### `firebase serve`
+  > *Must run `npm run build` first.*
+
   > *Changes to **front-end** will **NOT** be reflected in the Hosting emulator until project is re-compiled and emulator server is restarted.*
 
-  This command is for testing the app in a simulated production environment without actually deploying it to Firebase. Changes made to front-end will not be reloaded during this emulation.
+  *This command is for testing the app in a *simulated production environment* on your local machine.*
 
   Takes what is in the `build` folder and serves it on a local Hosting emulator. 
  
@@ -55,9 +55,10 @@
 
 ### `firebase deploy --only functions`
 
-  Deploys the compiled Functions from the `build` folder to Firebase.
+  Deploys functions from the `functions` folder to Firebase.
 
 ### `firebase deploy`
+> *Must run `npm run build` first.*
 
   Deploys the entire compiled application from the `build` folder to Firebase.
 
