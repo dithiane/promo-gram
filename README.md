@@ -16,7 +16,6 @@
 ## Development:
 
 ### `npm run dev`
-
   Runs the React front-end and Firebase Functions back-end simultaneously and watches for changes.
 
   *Front-end (React): Port 3000* <br>
@@ -24,17 +23,7 @@
 
   > *Firebase emulators run on port 5000 by default, *but* if Hosting and Functions are run simultaneously (i.e. with `firebase serve`), then Hosting will run on 5000 and Functions will run on 5001.*
 
-### `npm start`
-  Only runs the React front-end. <br>
-  *(Port 3000)*
-
-### `npm run functions`
-
-  Only runs the Firebase Functions back-end. <br>
-  *(Port 5000)*
-
 ### `npm run build`
-
   Compiles the app for production to the `build` folder. <br>
   It bundles React AND Firebase in production mode and optimizes the build for the best performance.
 
@@ -42,19 +31,15 @@
   - `firebase deploy` to deploy the app to Firebase.
   - `firebase serve` to see a *simulated deployment* in the Hosting emulator on your local machine (see `firebase serve` below).
 
+  ### `npm start`
+  Only runs the React front-end. <br>
+  *(Port 3000)*
+
+  ### `npm run functions`
+  Only runs the Firebase Functions back-end. <br>
+  *(Port 5000)*
+
 ## Production:
-
-### `firebase serve`
-  > *Must run `npm run build` first.*
-
-  > *Changes to **front-end** will **NOT** be reflected in the Hosting emulator until project is re-compiled and emulator server is restarted.*
-
-  *This command is for testing the app in a *simulated production environment* on your local machine.*
-
-  Takes what is in the `build` folder and serves it on a local Hosting emulator. 
- 
-  *Hosting (Front-End): Port 5000* <br>
-  *Functions (Back-End): Port 5001*
 
 ### `firebase deploy --only functions`
 
